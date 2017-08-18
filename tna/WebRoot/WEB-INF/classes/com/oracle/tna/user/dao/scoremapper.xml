@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3.dtd">
+    
+<mapper namespace="com.oracle.tna.user.dao.scoremapper">
+
+	<insert id="insert" parameterType="score">
+		insert into score (data,score,answer,s_answer,USER_UID) 
+		values(#{data},#{score},#{answer},#{s_answer},#{USER_UID})
+	</insert>
+	
+	<select id="select" resultType="score">
+		select * from score
+	</select>
+	
+	<select id="selectByid" parameterType="int" resultType="score">
+		select * from score where sid=#{sid}
+	</select>
+	
+	<select id="selectByUid" parameterType="int" resultType="score">
+		select * from score where USER_UID=#{USER_UID}
+	</select>
+	
+	<update id="update" parameterType="score">
+		update score set data=#{data},score=#{score},answer =#{answer},s_answer =#{s_answer}
+		where USER_UID=#{USER_UID}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		delete from score where sid=#{sid}
+	</delete>
+</mapper>
