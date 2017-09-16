@@ -1,9 +1,13 @@
 #TNA
 
 In our TNA system,you will experience these functions:
+
 Concise UI web page;
+
 Clear plate classify;
+
 Practical function introduction;
+
 
 As a USER,you have these permissions when you log in our system:
 Login a new account or change your account(your password primarily);
